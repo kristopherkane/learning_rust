@@ -13,10 +13,17 @@ fn main() {
     // HashMaps
     let mut book_reviews = HashMap::new();
     book_reviews.insert("key1".to_string(), "value1".to_string());
-    //Use unwrap if you know the key exists
+    //Use unwrap if you know the key exists - bad practice - may panic
     let review = book_reviews.get("key1").unwrap();
+    println!("'get' version Review: for key1 is {}", review);
 
-    println!("Review: for key1 is {}", review);
+    //proper, safe access to the value
+    match book_reviews.get("key1") {
+        Some(review) => println!("Pattern version review for key1: {}", review),
+        None => println!("Pattern version key1 is unreviewed.")
+    }
+
+
 }
 
 fn print_number(x: i32) {

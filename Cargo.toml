@@ -1,4 +1,4 @@
 [package]
-name = "Learning Rust" # the name of the package
+name = "learning_rust" # the name of the package
 version = "0.1.0"    # the current version, obeying semver
 authors = ["Kris <kristopher.kane@gmail.com>"]
